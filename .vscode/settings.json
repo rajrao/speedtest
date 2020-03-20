@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/8ea49fc6-6c94-4b56-ab40-f3347012bc19/resourceGroups/appsvc_windows_centralus/providers/Microsoft.Web/sites/aiSpeedTest",
+    "appService.deploySubpath": ""
+}

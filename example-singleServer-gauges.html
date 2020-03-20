@@ -7,9 +7,13 @@
 <script type="text/javascript" src="speedtest.js"></script>
 <script type="text/javascript">
 function I(i){return document.getElementById(i);}
+//example-singleServer-gauges.html
 //INITIALIZE SPEEDTEST
 var s=new Speedtest(); //create speedtest object
-
+s.setParameter("url_dl","backend/garbage.dat");
+s.setParameter("url_ul","backend/empty.dat");
+s.setParameter("url_ping","backend/empty.dat");
+s.setParameter("test_order","P_D_U");
 var meterBk=/Trident.*rv:(\d+\.\d+)/i.test(navigator.userAgent)?"#EAEAEA":"#80808040";
 var dlColor="#6060AA",
 	ulColor="#616161";
@@ -218,10 +222,10 @@ function initUI(){
 		}
 	}
 </style>
-<title>LibreSpeed Example</title>
+<title>Speed Test</title>
 </head>
 <body>
-<h1>LibreSpeed Example</h1>
+
 <div id="testWrapper">
 	<div id="startStopBtn" onclick="startStop()"></div>
 	<div id="test">
@@ -255,7 +259,8 @@ function initUI(){
 			<span id="ip"></span>
 		</div>
 	</div>
-	<a href="https://github.com/librespeed/speedtest">Source code</a>
+	<a href="https://github.com/rajrao/speedtest">Source code</a>
+Forked from: <a href="https://github.com/librespeed/speedtest">librespeed/speedtest"</a>
 </div>
 <script type="text/javascript">setTimeout(function(){initUI()},100);</script>
 </body>
